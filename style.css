@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --maincolor: #2D49FF;
+    --secondarycolor: #edf1fa;
+    --hovercolor: #001e52;
+    --bordercolor: #c9dcf8;
+    --pressedcolor: #0b3157;
+    --focuscolor: #355f8c;
+    --filtercolor: #0084ff3a;
+    --brilhocolor: #004cff12;
+}
+
+* {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    transition: all 1s cubic-bezier(0, 0.42, 0.74, 0.4);
+    outline: 0;
+    border: 0;
+    user-select: none
+}
+
+* {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    background-color: #13131368;
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4vh;
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: var(--maincolor);
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    /* transition: all 1s cubic-bezier(0, 0.42, 0.74, 0.4); */
+}
+
+main {
+    background-color: #070707;
+    border-radius: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vw;
+    width: 58vw;
+}
