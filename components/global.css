@@ -1,0 +1,10 @@
+:root {
+    --maincolor: #ff2e2e;
+    --secondarycolor: #faeded;
+    --hovercolor: #520000;
+    --bordercolor: #f8c9c9;
+    --pressedcolor: #570b0b;
+    --focuscolor: #8c3535;
+    --filtercolor: #ff00003a;
+    --brilhocolor: #ff000012;
+}

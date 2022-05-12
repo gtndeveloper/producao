@@ -26,5 +26,3 @@ const mobileNavbar = new MobileNavbar(
 )
 
 mobileNavbar.init()
-
-console.log(277 / 10 / 2)

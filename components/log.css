@@ -1,0 +1,79 @@
+#Log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.titleLog {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    top: 0;
+    padding: .1vw;
+    gap: 49%;
+}
+
+.titleLog span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3.26vw;
+    opacity: .8;
+}
+
+#log p{
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    color: white;
+}
+
+.mainLog {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    height: calc(
+        100% - 1.1375vw
+    );
+    margin-block: .3vw;
+
+    overflow-x: hidden;
+    gap: .8vw;
+}
+
+.squareLog {
+    width: 95%;
+    height: 2.3vw;
+    background-color: rgb(255, 255, 255, 9%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+
+    border-left: .15vw solid var(--maincolor);
+}
+
+.squareLog>p {
+    margin-inline-start: 1vw;
+    font-size: 0.7vw;
+}
+
+
+.endElements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+
+    margin-inline-end: 1vw;
+}
