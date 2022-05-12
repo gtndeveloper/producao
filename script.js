@@ -26,3 +26,8 @@ const mobileNavbar = new MobileNavbar(
 )
 
 mobileNavbar.init()
+
+window.addEventListener("message",({data}) => {
+    gtn.ReceberCallback(data.open,"main",'show')
+    gtn.ReceberCallbackAdicionarAtributo(data.resource,"body")
+})

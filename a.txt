@@ -1,0 +1,81 @@
+var gtn = {}
+
+gtn.RegisterKeyMappingHide = function (evento, keymapping, name, action) {
+    $(document).on(evento, function (key) {
+        if (key.which == keymapping) {
+            if (action == 'hide') {
+                $(name).hide()
+            } else if (action == 'fadeOut') {
+                $(name).fadeOut()
+            }
+        }
+    })
+}
+
+gtn.somarhtml = function (dom, domaction) {
+    $(dom).append(domaction)
+}
+
+gtn.removerClasse = function (dom, classe) {
+    $(dom).removeClass(classe)
+}
+gtn.adicionarClasse = function (dom, classe) {
+    $(dom).toggleClass(classe)
+}
+gtn.adicionarFixaClasse = function (dom, classe) {
+    $(dom).addClass(classe)
+}
+
+gtn.RegisterKeyMappingShow = function (evento, keymapping, name, action) {
+    $(document).on(evento, function (key) {
+        if (key.which == keymapping) {
+            if (action == 'show') {
+                $(name).show()
+            } else if (action == 'fadeIn') {
+                $(name).fadeIn()
+            }
+        }
+    })
+}
+
+gtn.fades = function (p1, p2) {
+    if (p1, p2 != undefined) {
+        $(p2).hide()
+        $(p1).show()
+    }
+}
+
+gtn.formatnumb = function (numb) {
+    if (numb != undefined) {
+        const numbres = new Intl.NumberFormat('pt-BR').format(numb)
+        return numbres
+    }
+}
+
+gtn.ReceberCallback = function (evt, name, action) {
+    if (evt != undefined) {
+        if (evt) {
+            if (action == 'show') {
+                $(name).show()
+            } else if (action == 'fadeIn') {
+                $(name).fadeIn()
+            } else if (action == 'hide') {
+                $(name).hide()
+            } else if (action == 'fadeOut') {
+                $(name).fadeOut()
+            }
+        }
+    }
+}
+gtn.ReceberCallbackAdicionarAtributo = function (evt, name) {
+    if (evt != undefined) {
+        if (name != undefined) {
+            $(name).attr('resource', evt)
+        }
+    }
+}
+
+gtn.Anim = function (dom, delay) {
+    $(dom).css("transition", "all 1s ease").css("transform", "translate(0px) scale(0.8)").css("opacity", "0.8");
+    setTimeout(() => { $(dom).css("transform", "translate(0px) scale(1)").css("opacity", "1") }, delay != undefined ? delay : 120);
+}
