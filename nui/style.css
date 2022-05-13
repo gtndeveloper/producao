@@ -49,7 +49,7 @@ body {
 body {
     display: grid;
     place-content: center;
-    background: url(./components/imgs/fundo.svg) fixed center center transparent;
+    /* background: url(./components/imgs/fundo.svg) fixed center center transparent; */
     /* transition: all 1s cubic-bezier(0, 0.42, 0.74, 0.4); */
 }
 

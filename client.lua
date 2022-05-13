@@ -7,13 +7,13 @@ local config = module('vrp_producao','config')
 
 local Open = false
 function ToggleActionMenu(dom)
-	open = not open
-	if open then
+	Open = not Open
+	if Open then
 		SetNuiFocus(true,true)
-		SendNUIMessage({ Open = dom })
+		SendNUIMessage({ Open = dom, resource = GetCurrentResourceName()})
 	else
 		SetNuiFocus(false)
-		SendNUIMessage({ Open = false })
+		SendNUIMessage({ Open = false, resource = GetCurrentResourceName() })
 	end
 end
 

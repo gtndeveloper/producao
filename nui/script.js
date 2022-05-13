@@ -40,6 +40,7 @@ function actNui(dom) {
 }
 
 function GetJSON(domJSON,mainAppend) {
+    $('.square').remove()
     $.getJSON('./components/config/config.json', data => {
         $('.title img').attr('src', data.logo != undefined ? data.logo : ' ./components/imgs/logo.png ')
         for (i = 0; i < data[domJSON].length; i++) {
