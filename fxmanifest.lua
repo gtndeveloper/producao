@@ -15,4 +15,6 @@ server_scripts {
 
 files {
 	"nui/*",
+	"nui/components/*.*",
+	"nui/components/*/*.*",
 }
