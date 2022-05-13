@@ -144,8 +144,12 @@ main::before {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
+}
+
+.main-elements section .square p {
+    margin-top: .5vw;
 }
 
 .square img {
