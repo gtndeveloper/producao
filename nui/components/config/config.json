@@ -9,13 +9,13 @@
         },
         {
             "name" : "ADUBO",
-            "img" : "./components/imgs/cocaina.svg",
+            "img" : "./components/imgs/maconha.svg",
             "itemSpawn" : "adubo",
             "qtdSpawn": "1"
         },
         {
             "name" : "FERTILIZANTE",
-            "img" : "./components/imgs/metanfetamina.svg",
+            "img" : "./components/imgs/maconha.svg",
             "itemSpawn" : "fertilizante",
             "qtdSpawn": "1"
         }
@@ -35,28 +35,28 @@
         },
         {
             "name" : "FOLHA DE COCA",
-            "img" : "./components/imgs/metanfetamina.svg",
+            "img" : "./components/imgs/cocaina.svg",
             "itemSpawn" : "folhadecoca",
             "qtdSpawn": "1"
         }
     ],
     "groove": [
         {
-            "name": "MACONHA",
-            "img": "./components/imgs/maconha.svg",
-            "itemSpawn": "maconha",
-            "qtdSpawn": "1"
-        },
-        {
-            "name": "COCAINA",
-            "img": "./components/imgs/cocaina.svg",
-            "itemSpawn": "cocaina",
-            "qtdSpawn": "1"
-        },
-        {
             "name": "METANFETAMINA",
             "img": "./components/imgs/metanfetamina.svg",
             "itemSpawn": "metanfetamina",
+            "qtdSpawn": "1"
+        },
+        {
+            "name": "ANFETAMINA",
+            "img": "./components/imgs/metanfetamina.svg",
+            "itemSpawn": "anfetamina",
+            "qtdSpawn": "1"
+        },
+        {
+            "name": "BATERIA",
+            "img": "./components/imgs/metanfetamina.svg",
+            "itemSpawn": "anfetamina",
             "qtdSpawn": "1"
         }
     ]

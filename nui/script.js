@@ -33,11 +33,61 @@ function logAppend(data) {
     $( html ).appendTo(' .mainLog ')
 }
 
+function actNui(dom) {
+    gtn.Anim('.square', 250)
+    $("main").hide()
+    $(dom).fadeIn()
+}
+
+function GetJSON(domJSON,mainAppend) {
+    $.getJSON('./components/config/config.json', data => {
+        $('.title img').attr('src', data.logo != undefined ? data.logo : ' ./components/imgs/logo.png ')
+        for (i = 0; i < data[domJSON].length; i++) {
+            const html =
+                `
+            <div class =  ' square ' >
+                <p>
+                    ${data[domJSON][i].name}
+                </p>
+
+                <img 
+                    src =  ' ${data[domJSON][i].img} '  
+                />
+                
+                <img 
+                    src =  ' ./components/imgs/seta.svg '  
+                    class =  ' seta ' 
+                />
+
+                <button onClick = "buy( this )" itemSpawn= ' ${data[domJSON][i].itemSpawn} '  qtdSpawn= ' ${data[domJSON][i].qtdSpawn} ' >
+                    PRODUZIR
+                </button>
+            </div>            
+        `
+            $(`${mainAppend} .Flex `).append(html)
+        }
+    })
+}
+
 window.addEventListener('message',({data}) => {
-    if (data.Open) {
-        ActionNUI('show', false, false, 'main') 
-        gtn.Anim('.square',250)
+    switch (data.Open) {
+        case "ballas":
+                actNui("#ballas")
+                GetJSON("ballas","#ballas")
+            break;
+        case "vagos":
+                actNui("#vagos")
+                GetJSON("vagos", "#vagos")
+            break;
+            case "groove":
+                actNui("#groove")
+                GetJSON("groove", "#groove")
+            break;
+    
+        default:
+            break;
     }
+    
     if (data.dataLog != undefined) {
         logAppend(data.dataLog)
     }
@@ -47,34 +97,6 @@ window.addEventListener('message',({data}) => {
 $(document).on('keyup',(event) => {
     if (event.which == 27) {
         ActionNUI('close', true, 'close', 'main') 
-    }
-})
-
-$.getJSON('./components/config/config.json',data => {
-    $('.title img').attr('src', data.logo != undefined ? data.logo :  ' ./components/imgs/logo.png '  )
-    for (i = 0; i < data.products.length; i++) {
-        const html = 
-        `
-            <div class =  ' square ' >
-                <p>
-                    ${data.products[i].name}
-                </p>
-
-                <img 
-                    src =  ' ${data.products[i].img} '  
-                />
-                
-                <img 
-                    src =  ' ./components/imgs/seta.svg '  
-                    class =  ' seta ' 
-                />
-
-                <button onClick = "buy( this )" itemSpawn= ' ${data.products[i].itemSpawn} '  qtdSpawn= ' ${data.products[i].qtdSpawn} ' >
-                    PRODUZIR
-                </button>
-            </div>            
-        `
-        $( ' .Flex ' ).append(html)
     }
 })
 
