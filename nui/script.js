@@ -60,7 +60,7 @@ function GetJSON(domJSON,mainAppend) {
                     class =  ' seta ' 
                 />
 
-                <button onClick = "buy( this )" itemSpawn= ' ${data[domJSON][i].itemSpawn} '  qtdSpawn= ' ${data[domJSON][i].qtdSpawn} ' >
+                <button onClick = "buy( this )" qtdRem = '${data[domJSON][i].QtdItemRemover}' itemRem = '${data[domJSON][i].itemRemover}' itemSpawn= '${data[domJSON][i].itemSpawn}'  qtdSpawn= '${data[domJSON][i].qtdSpawn}' >
                     PRODUZIR
                 </button>
             </div>            
@@ -107,7 +107,9 @@ const buy = (data) => {
         `https://${resource}/buy`,
         JSON.stringify({
             item: $(data).attr('itemSpawn'),
-            quantidade: $(data).attr('qtdSpawn')
+            quantidade: $(data).attr('qtdSpawn'),
+            qtdRem: $(data).attr('qtdRem'),
+            ItemRem : $(data).attr('itemRem')
         })
     )
 }

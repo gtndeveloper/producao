@@ -22,6 +22,26 @@ function gtn.checkGroup()
         end
     end
     TriggerClientEvent("Notify",source,"aviso","Você não tem permissão")
-    print('Permissões checadas, jogador sem permissão')
     return false
+end
+
+function gtn.buy(item,quantidade,qtdRem,ItemRem)
+    local source = source
+    local userid = vRP.getUserId(source)
+    if vRP.getInventoryWeight(userid)+vRP.getInventoryItemAmount(userid,item) < vRP.getInventoryMaxWeight(userid) then
+        if vRP.tryGetInventoryItem(userid,ItemRem,qtdRem) then
+            TriggerClientEvent("progress",source,10000)
+            vRPclient._playAnim(source,false,{{"amb@prop_human_parking_meter@female@idle_a","idle_a_female"}},true)
+
+            SetTimeout(10000,function()
+                vRPclient._stopAnim(source,false)
+                vRP.giveInventoryItem(userid,item,quantidade)
+                TriggerClientEvent("Notify",source,"sucesso","Você produziu <b> "..item.." </b>.")
+            end)
+        else
+            TriggerClientEvent("Notify",source,"aviso",ItemRem.." insuficiente")
+        end
+    else 
+        TriggerClientEvent("Notify",source,"aviso","Espaço na mochila insuficiente")
+    end
 end

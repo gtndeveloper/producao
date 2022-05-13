@@ -23,6 +23,13 @@ RegisterNUICallback("close",function ()
     SendNUIMessage({ Open = false })
 end)
 
+RegisterNUICallback("buy",function ( data )
+    if data.item then
+        gtn.buy(data.item,data.quantidade,data.qtdRem,data.ItemRem)
+        print(data.item,data.quantidade,data.qtdRem,data.ItemRem)
+    end
+end)
+
 RegisterCommand("produzir",function (source)
     local group = ""
     if gtn.checkGroup then

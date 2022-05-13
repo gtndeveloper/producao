@@ -5,19 +5,17 @@
             "name" : "MACONHA",
             "img" : "./components/imgs/maconha.svg",
             "itemSpawn" : "maconha",
-            "qtdSpawn" : "1" 
-        },
-        {
-            "name" : "ADUBO",
-            "img" : "./components/imgs/maconha.svg",
-            "itemSpawn" : "adubo",
-            "qtdSpawn": "1"
+            "itemRemover": "fertilizante",
+            "QtdItemRemover": 3,
+            "qtdSpawn" : 1 
         },
         {
             "name" : "FERTILIZANTE",
             "img" : "./components/imgs/maconha.svg",
             "itemSpawn" : "fertilizante",
-            "qtdSpawn": "1"
+            "itemRemover": "adubo",
+            "QtdItemRemover": 3,
+            "qtdSpawn": 1
         }
     ],
     "vagos" : [
@@ -25,19 +23,17 @@
             "name" : "COCAINA",
             "img" : "./components/imgs/cocaina.svg",
             "itemSpawn" : "cocaina",
-            "qtdSpawn" : "1" 
+            "itemRemover": "pastadecoca",
+            "QtdItemRemover": 3,
+            "qtdSpawn" : 1 
         },
         {
             "name" : "PASTA DE COCA",
             "img" : "./components/imgs/cocaina.svg",
             "itemSpawn" : "pastadecoca",
-            "qtdSpawn": "1"
-        },
-        {
-            "name" : "FOLHA DE COCA",
-            "img" : "./components/imgs/cocaina.svg",
-            "itemSpawn" : "folhadecoca",
-            "qtdSpawn": "1"
+            "itemRemover" : "folhadecoca",
+            "QtdItemRemover" : 3,
+            "qtdSpawn": 1
         }
     ],
     "groove": [
@@ -45,19 +41,17 @@
             "name": "METANFETAMINA",
             "img": "./components/imgs/metanfetamina.svg",
             "itemSpawn": "metanfetamina",
-            "qtdSpawn": "1"
+            "itemRemover": "anfetamina",
+            "QtdItemRemover": 3,
+            "qtdSpawn": 1
         },
         {
             "name": "ANFETAMINA",
             "img": "./components/imgs/metanfetamina.svg",
             "itemSpawn": "anfetamina",
-            "qtdSpawn": "1"
-        },
-        {
-            "name": "BATERIA",
-            "img": "./components/imgs/metanfetamina.svg",
-            "itemSpawn": "anfetamina",
-            "qtdSpawn": "1"
+            "itemRemover": "bateria",
+            "QtdItemRemover": 3,
+            "qtdSpawn": 1
         }
     ]
 }
