@@ -1,31 +1,4 @@
-class MobileNavbar {
-    constructor(mobileMenu, navList) {
-        this.mobileMenu = $(mobileMenu);
-        this.MobileList = $(navList);
-        this.activeClass = 'active';
-    }
-
-    addClickEvent() {
-        $(this.mobileMenu).click(() => {
-            $('body').toggleClass('menuExpanded')
-            $(this.MobileList).toggle(this.activeClass)
-        })
-    }
-
-    init() {
-        if (this.mobileMenu) {
-            this.addClickEvent();
-        }
-        return this
-    }
-}
-
-const mobileNavbar = new MobileNavbar(
-    '.menuOpen,.menuClose',
-    '.navList'
-)
-
-mobileNavbar.init()
+var resource;
 
 function ActionNUI(act, postOptions, post, dom) {
     switch (act) {
@@ -78,30 +51,40 @@ $(document).on('keyup',(event) => {
 })
 
 $.getJSON('./components/config/config.json',data => {
-    $('.title img').attr('src', data.logo != undefined ? data.logo : "./components/imgs/logo.png" )
-
+    $('.title img').attr('src', data.logo != undefined ? data.logo :  ' ./components/imgs/logo.png '  )
     for (i = 0; i < data.products.length; i++) {
         const html = 
         `
-            <div class = "square">
+            <div class =  ' square ' >
                 <p>
                     ${data.products[i].name}
                 </p>
 
                 <img 
-                    src = "${data.products[i].img}" 
+                    src =  ' ${data.products[i].img} '  
                 />
                 
                 <img 
-                    src = "./components/imgs/seta.svg" 
-                    class = "seta"
+                    src =  ' ./components/imgs/seta.svg '  
+                    class =  ' seta ' 
                 />
 
-                <button itemSpawn="${data.products[i].itemSpawn}" qtdSpawn="${data.products[i].qtdSpawn}">
+                <button onClick = "buy( this )" itemSpawn= ' ${data.products[i].itemSpawn} '  qtdSpawn= ' ${data.products[i].qtdSpawn} ' >
                     PRODUZIR
                 </button>
             </div>            
         `
-        $(".Flex").append(html)
+        $( ' .Flex ' ).append(html)
     }
 })
+
+const buy = (data) => {
+    resource = resource = $(' body ').attr('resource')
+    $.post(
+        `https://${resource}/buy`,
+        JSON.stringify({
+            item: $(data).attr('itemSpawn'),
+            quantidade: $(data).attr('qtdSpawn')
+        })
+    )
+}

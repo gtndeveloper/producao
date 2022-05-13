@@ -36,13 +36,15 @@
 .mainLog {
     align-items: flex-start;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row !important;
     justify-content: flex-start;
+    flex-wrap: wrap !important;
     width: 100%;
 
     height: calc(
         100% - 1.1375vw
     );
+
     margin-block: .3vw;
 
     overflow-x: hidden;
@@ -61,6 +63,8 @@
     gap: 4vw;
 
     border-left: .15vw solid var(--maincolor);
+    position: relative;
+    top: 0 !important;
 }
 
 .squareLog>p {
