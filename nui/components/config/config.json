@@ -1,6 +1,6 @@
 {
     "logo": "./components/imgs/logo.png",
-    "products" : [
+    "ballas" : [
         {
             "name" : "MACONHA",
             "img" : "./components/imgs/maconha.svg",
@@ -8,15 +8,55 @@
             "qtdSpawn" : "1" 
         },
         {
-            "name" : "COCAINA",
+            "name" : "ADUBO",
             "img" : "./components/imgs/cocaina.svg",
-            "itemSpawn" : "cocaina",
+            "itemSpawn" : "adubo",
             "qtdSpawn": "1"
         },
         {
-            "name" : "METANFETAMINA",
+            "name" : "FERTILIZANTE",
             "img" : "./components/imgs/metanfetamina.svg",
-            "itemSpawn" : "metanfetamina",
+            "itemSpawn" : "fertilizante",
+            "qtdSpawn": "1"
+        }
+    ],
+    "vagos" : [
+        {
+            "name" : "COCAINA",
+            "img" : "./components/imgs/cocaina.svg",
+            "itemSpawn" : "cocaina",
+            "qtdSpawn" : "1" 
+        },
+        {
+            "name" : "PASTA DE COCA",
+            "img" : "./components/imgs/cocaina.svg",
+            "itemSpawn" : "pastadecoca",
+            "qtdSpawn": "1"
+        },
+        {
+            "name" : "FOLHA DE COCA",
+            "img" : "./components/imgs/metanfetamina.svg",
+            "itemSpawn" : "folhadecoca",
+            "qtdSpawn": "1"
+        }
+    ],
+    "groove": [
+        {
+            "name": "MACONHA",
+            "img": "./components/imgs/maconha.svg",
+            "itemSpawn": "maconha",
+            "qtdSpawn": "1"
+        },
+        {
+            "name": "COCAINA",
+            "img": "./components/imgs/cocaina.svg",
+            "itemSpawn": "cocaina",
+            "qtdSpawn": "1"
+        },
+        {
+            "name": "METANFETAMINA",
+            "img": "./components/imgs/metanfetamina.svg",
+            "itemSpawn": "metanfetamina",
             "qtdSpawn": "1"
         }
     ]
